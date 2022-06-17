@@ -70,7 +70,7 @@ void	get_cylinder(t_elem *new, t_info *info)
 	new->pos = get_vector(info->split[1]);
 	check_normal(get_vector(info->split[2]));
 	new->normal = vec_unit(get_vector(info->split[2]));
-	new->diam = get_double(info->split[3]);
+	new->diam = get_double(info->split[3]) / 2;
 	new->height = get_double(info->split[4]);
 	new->color = get_color(info->split[5]);
 	list_add_back_elem(new, &info->cy);
